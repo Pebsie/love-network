@@ -17,10 +17,16 @@ while running do
     entity, cmd, parms = data:match("^(%S*) (%S*) (.*)")
 
     --responses to commands here
+
   elseif msg_or_ip ~= 'timeout' then
     error("Unknown network error: "..tostring(msg))
 
     socket.sleep(0.1)
   end
 
+  --further game behaviour here
+  --TIP: use os.time() to count seconds since execution
+  --E.G, send hello every 2 seconds
+  --if ((os.time() - lastSend) > 1) then udp:sendto("Hello!") lastSend = os.time() end
+end
   print("Server closed.")
