@@ -1,3 +1,4 @@
+--this is NOT a LOVE project: don't run it with Love, run it with Lua.
 local socket = require "socket"
 local udp = socket.udp()
 
