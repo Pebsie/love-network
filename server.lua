@@ -12,7 +12,7 @@ print("Entering server loop...")
 
 while running do
 
-  data, msg_or_ip, port_or_nil = udp:receiveFrom()
+  data, msg_or_ip, port_or_nil = udp:receivefrom()
   if data then
     entity, cmd, parms = data:match("^(%S*) (%S*) (.*)")
 
